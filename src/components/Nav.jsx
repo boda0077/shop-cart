@@ -24,7 +24,11 @@ function Nav() {
         <Link to="/" className="text-lg font-semibold hover:text-yellow-500 transition-all">Home</Link>
         <Link to="/shop" className="text-lg font-semibold hover:text-yellow-500 transition-all">Shop</Link>
         <Link to="/about" className="text-lg font-semibold hover:text-yellow-500 transition-all">About</Link>
-        <Link to="/cart" className="text-lg font-semibold hover:text-yellow-500 transition-all"><i className="fa-solid fa-cart-shopping cursor-pointer"></i></Link>
+        <Link to="/cart" className="text-lg font-semibold hover:text-yellow-500 transition-all"><i className="fa-solid fa-cart-shopping cursor-pointer"></i>{cartQuantity > 0 && (
+              <span className="bg-red-400 rounded-full text-sm px-1  top-0 right-0">
+                {cartQuantity}
+              </span>
+            )}</Link>
       </div>
 
       <ul className="hidden md:flex space-x-5 items-center">
